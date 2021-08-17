@@ -1,0 +1,42 @@
+.bgimg-none {
+    background-image: none !important;
+}
+.text-decoration-none:hover{
+    text-decoration: none;
+}
+.w500 {
+    width:350px;
+}
+.max-height {
+    height:100vh;
+}
+.bg {
+    background-color: gray;
+}
+a {
+    color:black !important;
+}
+.red {
+    color:red;
+}
+.z-101 {
+    z-index:101 !important;
+}
+
+.w100-percent {
+    width:100% !important;
+}
+.break-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.searchbox {
+    padding-left:none !important;
+    background-color:white !important
+}
+
+.padding-breadcrumb {
+    padding-left:110px !important
+}
