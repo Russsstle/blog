@@ -4,7 +4,7 @@
 <div>Admin Credentials:</div>
 <div> admin@gmail.com
 </div>
-<div 
+<div> 
     admin12345
 </div>
 <div>Password of created users through admin:</div>
