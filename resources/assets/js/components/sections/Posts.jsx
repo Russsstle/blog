@@ -12,7 +12,7 @@ class Posts extends React.Component {
   componentDidMount() {
     this.generatePosts(this.props.homeStateData)
   }
-
+  //Generate posts to be displayed
   generatePosts(data) {
     const articles = data.articles;
     let filteredPosts = [];
@@ -51,6 +51,7 @@ class Posts extends React.Component {
     filteredPosts = filteredPosts.length == 0 ? 'No Posts Available' : filteredPosts;
     this.setState({posts:filteredPosts})
   }
+
   render() {
     return (
     <div className="uk-flex-center uk-grid-medium" data-uk-grid>

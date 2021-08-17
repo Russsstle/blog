@@ -35854,7 +35854,8 @@ var Registration = /*#__PURE__*/function (_React$Component) {
       var name = e.target.name;
       var value = e.target.value;
       this.setState(_defineProperty({}, name, value));
-    }
+    } //Register form inputs through API
+
   }, {
     key: "handleSubmit",
     value: function () {
@@ -35875,9 +35876,9 @@ var Registration = /*#__PURE__*/function (_React$Component) {
                     return _this2.props.history.push("/login");
                   }
                 })["catch"](function (errorResponse) {
-                  var errorData = errorResponse.response.data; // Append error message on each inputs
+                  var errorData = errorResponse.response.data; //Append error message on each inputs
 
-                  // Append error message on each inputs
+                  //Append error message on each inputs
                   if (errorData.message === "The given data was invalid.") {
                     document.querySelectorAll('span').forEach(function (e) {
                       return e.innerHTML = "";
@@ -36120,6 +36121,11 @@ var Admin = /*#__PURE__*/function (_Component) {
     value: function fetchUserData(userData) {
       var _this3 = this;
 
+      if (userData.user.user_type !== 'admin') {
+        this.props.history.push('/');
+      }
+
+      console.log(userData);
       this.setState({
         name: userData.user.name,
         id: userData.user.id
@@ -37647,7 +37653,8 @@ var Comment = /*#__PURE__*/function (_React$Component) {
       }
 
       return handleDelete;
-    }()
+    }() //Append comment blocks to be displayed
+
   }, {
     key: "generateComments",
     value: function generateComments(comments) {
@@ -37868,7 +37875,7 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
       var data = this.state.data;
       var title;
       var writeButton;
-      var url = '/';
+      var url = '/'; //Initialize text and buttons to be displayed
 
       if (Object.keys(data).length != 0) {
         localStorage.setItem('name', data.user.name);
@@ -37987,7 +37994,8 @@ var Posts = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.generatePosts(this.props.homeStateData);
-    }
+    } //Generate posts to be displayed
+
   }, {
     key: "generatePosts",
     value: function generatePosts(data) {

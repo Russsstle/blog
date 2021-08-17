@@ -30,6 +30,10 @@ class Admin extends Component {
 
     //Saves current user data for the page
     fetchUserData(userData) {
+        if (userData.user.user_type !== 'admin') {
+            this.props.history.push('/')
+        }
+        console.log(userData)
         this.setState({name:userData.user.name, id: userData.user.id}, () => {
             this.fetchUsers()
         });
@@ -102,7 +106,7 @@ class Admin extends Component {
         }
         
     }
-    
+
     //Delete Selected User
     async handleDelete(userId) {
         if(confirm("Are you sure you want to delete this account?")) {

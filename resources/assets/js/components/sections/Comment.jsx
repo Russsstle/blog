@@ -15,9 +15,11 @@ class Comment extends React.Component {
   componentDidMount(){
     this.fetchComments();
   }
+  
   componentWillUnmount() {
     this._isMounted = false;
-} 
+  } 
+
   //Call API to save a comment
   async handleSubmit() {
     await axios.post('/api/addComment', {articleId:this.props.articleId, userId:this.props.userId, content:this.state.comment}).then(response => {
@@ -35,6 +37,7 @@ class Comment extends React.Component {
       console.log(error) 
     });
   }
+
   //Delete comment through API
   async handleDelete(commentId) {
     await axios.post('/api/deleteCommentById', {id:commentId}).then(() => {  
@@ -43,6 +46,8 @@ class Comment extends React.Component {
       console.log(error) 
     });
   }
+
+  //Append comment blocks to be displayed
   generateComments(comments) {
     let commentDisplay=[];
     comments.forEach((commentDetails, index) => {

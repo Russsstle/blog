@@ -50,6 +50,7 @@ class Navbar extends React.Component {
     let title;
     let writeButton;
     let url  ='/'
+    //Initialize text and buttons to be displayed
     if(Object.keys(data).length != 0) {
       localStorage.setItem('name', data.user.name)
       title =  (data.user.user_type === 'admin') ? 'Admin' : 'Blog';

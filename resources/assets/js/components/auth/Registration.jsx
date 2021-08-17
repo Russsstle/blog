@@ -22,7 +22,7 @@ class Registration extends React.Component {
         const value = e.target.value;
         this.setState({[name]:value});
     }
-    
+    //Register form inputs through API
     async handleSubmit(e) {
         e.preventDefault();
         const data = this.state;
@@ -35,7 +35,7 @@ class Registration extends React.Component {
         }).catch(errorResponse => {
             const errorData = errorResponse.response.data;
            
-            // Append error message on each inputs
+            //Append error message on each inputs
             if (errorData.message === "The given data was invalid.") {
                 document.querySelectorAll('span').forEach(e => e.innerHTML = "");
                 Object.keys(errorData.errors).map(function(key, value) {
