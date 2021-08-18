@@ -37047,7 +37047,7 @@ var View = /*#__PURE__*/function (_Component) {
 
       if (this.state.mode === 'view') {
         title = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-          className: "uk-article-title"
+          className: "uk-article-title uk-text-break"
         }, article.title);
         content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
           className: "uk-text-lead uk-text-break",
@@ -38026,7 +38026,7 @@ var Posts = /*#__PURE__*/function (_React$Component) {
             }, ownArticleIcon, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
               className: "uk-article"
             }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-              className: "uk-article-title"
+              className: "uk-article-title uk-text-break"
             }, articleDetails.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
               className: "article-meta"
             }, "Written by ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {

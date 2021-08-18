@@ -34,7 +34,7 @@ class Posts extends React.Component {
                         <div className="border border-primary border-5 uk-padding">
                             {ownArticleIcon}
                             <article className="uk-article">
-                                <p className="uk-article-title">{articleDetails.title}</p>
+                                <p className="uk-article-title uk-text-break">{articleDetails.title}</p>
                                 <p className="article-meta">Written by <a href="#">{articleDetails.user.name}</a> {new Date(articleDetails.created_at).toISOString().split('T')[0]}</p>
                                 <p className="uk-text-lead break-content">{articleDetails.content}</p>
                                 <div className="row">

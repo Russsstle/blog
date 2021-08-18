@@ -57,7 +57,6 @@ class Navbar extends React.Component {
       url =  (data.user.user_type === 'admin') ? '/admin' : '/';
       writeButton = (data.user.user_type !== 'admin') ?  <Link className="text-decoration-none uk-text-center" to="/write"><span uk-icon="icon:  plus-circle;ratio: 2"></span></Link> : '';
      
-     
       localStorage.setItem('title', title)
     }
     

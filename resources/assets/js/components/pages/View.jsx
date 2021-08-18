@@ -130,7 +130,7 @@ class View extends Component {
     }
     //Generate DOM for view
     if (this.state.mode === 'view') {
-      title = (<p className="uk-article-title">{article.title}</p>);
+      title = (<p className="uk-article-title uk-text-break" >{article.title}</p>);
       content = (<p className="uk-text-lead uk-text-break" style={{whiteSpace:'pre-wrap'}}>{article.content}</p>);
       categories.forEach(function (categoryName, index) { 
           category.push(<div className="paper-btn btn-secondary" key={index}>{categoryName}</div>)
